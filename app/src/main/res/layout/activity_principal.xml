@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/patron">
+
+    <TextView
+        android:id="@+id/textMenuPrincipal"
+        android:layout_width="351dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="65dp"
+        android:gravity="center"
+        android:text="MENÚ PRINCIPAL"
+        android:textColor="#F478A2"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tienda"
+        style="?attr/materialIconButtonFilledTonalStyle"
+        android:layout_width="207dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#FCE4EC"
+        android:text="Tienda"
+        android:textColor="#E91E63"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMenuPrincipal" />
+
+    <Button
+        android:id="@+id/denunciabtn"
+        style="?attr/materialIconButtonFilledTonalStyle"
+        android:layout_width="207dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FCE4EC"
+        android:text="Denuncia"
+        android:textColor="#E91E63"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tienda" />
+
+    <Button
+        android:id="@+id/FAQbtn"
+        android:layout_width="207dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FCE4EC"
+        android:text="FAQ'S"
+        android:textColor="#E91E63"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/denunciabtn" />
+
+    <Button
+        android:id="@+id/btnRanking"
+        android:layout_width="207dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FCE4EC"
+        android:text="Ranking"
+        android:textColor="#E91E63"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FAQbtn" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="83dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="300dp"
+        android:background="@drawable/patron"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
