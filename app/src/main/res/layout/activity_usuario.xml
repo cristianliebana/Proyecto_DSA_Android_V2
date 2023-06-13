@@ -21,8 +21,8 @@
 
     <TextView
         android:id="@+id/txtNombreUsuario"
-        android:layout_width="225dp"
-        android:layout_height="31dp"
+        android:layout_width="348dp"
+        android:layout_height="63dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="25sp"
@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/txtCorreo"
-        android:layout_width="227dp"
-        android:layout_height="40dp"
+        android:layout_width="348dp"
+        android:layout_height="63dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="25sp"
@@ -44,8 +44,8 @@
 
     <TextView
         android:id="@+id/txtDinero"
-        android:layout_width="220dp"
-        android:layout_height="43dp"
+        android:layout_width="348dp"
+        android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="25sp"
@@ -58,7 +58,7 @@
         android:id="@+id/textInventario"
         android:layout_width="354dp"
         android:layout_height="113dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:text="Objetos en el inventario"
         android:textColor="#F478A2"
@@ -72,7 +72,7 @@
         android:layout_width="413dp"
         android:layout_height="313dp"
         android:layout_below="@+id/txtDinero"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/patron"
         android:scrollbars="vertical"
         app:layout_constraintTop_toBottomOf="@+id/textInventario"

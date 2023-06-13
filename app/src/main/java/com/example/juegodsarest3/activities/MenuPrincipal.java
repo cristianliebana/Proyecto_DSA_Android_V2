@@ -2,6 +2,7 @@ package com.example.juegodsarest3.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.juegodsarest3.R;
 import com.example.juegodsarest3.models.CredencialTO;
@@ -41,6 +43,8 @@ public class MenuPrincipal extends AppCompatActivity {
         configureFAQButton();
         configureRankingButton();
         configureImageButton();
+        configureEmpezarButton();
+        configureCerrarSesionbtn();
 
         TextView myTextview = findViewById(R.id.textMenuPrincipal);
         String textoMenu = getResources().getString(R.string.Main_menu);
@@ -97,5 +101,42 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(siguienteIntent);
             }
         });
+    }
+    private void configureEmpezarButton() {
+        Button empezarbutton = findViewById(R.id.empezarJuegobtn); // Reemplaza "button" con el ID de tu botón
+        empezarbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = getPackageManager().getLaunchIntentForPackage("com.android.Gallery"); // Reemplaza "com.tu.paquete" con el nombre del paquete de la APK que deseas abrir
+
+                if (intent != null) {
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "No se pudo encontrar la aplicación", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+    private void configureCerrarSesionbtn() {
+
+        ImageButton cerrarbutton = (ImageButton) findViewById(R.id.cerrarSesionBtn);
+        cerrarbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Borrar los datos guardados en SharedPreferences
+                SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.apply();
+
+                // Cerrar la aplicación
+
+                finish();
+                Intent intent = new Intent(MenuPrincipal.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                }
+            });
+
     }
     }

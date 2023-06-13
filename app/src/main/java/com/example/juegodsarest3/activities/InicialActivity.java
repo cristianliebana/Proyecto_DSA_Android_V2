@@ -38,4 +38,5 @@ public class InicialActivity extends AppCompatActivity {
             }
         });
     }
+
 }
