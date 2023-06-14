@@ -2,6 +2,7 @@ package com.example.juegodsarest3.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -107,13 +108,9 @@ public class MenuPrincipal extends AppCompatActivity {
         empezarbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getPackageManager().getLaunchIntentForPackage("com.android.Gallery"); // Reemplaza "com.tu.paquete" con el nombre del paquete de la APK que deseas abrir
-
-                if (intent != null) {
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(getApplicationContext(), "No se pudo encontrar la aplicación", Toast.LENGTH_SHORT).show();
-                }
+                Intent i = new Intent();
+                i.setComponent(new ComponentName("com.DefaultCompany.MyProject", "com.unity3d.player.UnityPlayerActivity"));
+                startActivity(i);
             }
         });
     }
