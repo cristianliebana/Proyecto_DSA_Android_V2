@@ -112,6 +112,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
         Swagger swaggerApi = RetrofitClient.getInstance().getMyApi();
         Call<Mapa> call = swaggerApi.getMapa(nombremapaunity);
+        //
         call.enqueue(new Callback<Mapa>() {
             @Override
             public void onResponse(Call<Mapa> call, Response<Mapa> response) {
