@@ -11,6 +11,7 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -19,10 +20,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.juegodsarest3.R;
+import com.example.juegodsarest3.RetrofitClient;
 import com.example.juegodsarest3.models.CredencialTO;
+import com.example.juegodsarest3.models.Mapa;
+import com.example.juegodsarest3.models.Swagger;
+import com.example.juegodsarest3.models.Usuario;
 import com.squareup.picasso.Picasso;
 
 import java.util.Locale;
+import java.util.concurrent.atomic.AtomicReference;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MenuPrincipal extends AppCompatActivity {
 
@@ -105,11 +115,49 @@ public class MenuPrincipal extends AppCompatActivity {
     }
     private void configureEmpezarButton() {
         Button empezarbutton = findViewById(R.id.empezarJuegobtn); // Reemplaza "button" con el ID de tu botón
+        String nombremapaunity = "Nivel 1";
+        AtomicReference<String> nombremapabackend = new AtomicReference<>("");
+        AtomicReference<String> mapatxtbackend = new AtomicReference<>("");
+
+        Swagger swaggerApi = RetrofitClient.getInstance().getMyApi();
+        Call<Mapa> call = swaggerApi.getMapa(nombremapaunity);
+        call.enqueue(new Callback<Mapa>() {
+            @Override
+            public void onResponse(Call<Mapa> call, Response<Mapa> response) {
+                if (response.isSuccessful()) {
+                    Mapa m = response.body();
+                    if (m != null) {
+                        nombremapabackend.set(m.getNombremapa());
+                        mapatxtbackend.set(m.getMapatxt());
+                        // Continúa con el resto de la lógica después de recibir la respuesta exitosa
+                    } else {
+                        // La respuesta no contiene un objeto Mapa válido
+                        // Maneja el caso en consecuencia
+                    }
+                } else {
+                    // La solicitud no fue exitosa (código de respuesta diferente de 2xx)
+                    // Maneja el caso en consecuencia
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Mapa> call, Throwable t) {
+                // Error en la comunicación con el servidor
+                // Maneja el caso en consecuencia
+            }
+        });
+
         empezarbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
                 i.setComponent(new ComponentName("com.DefaultCompany.MyProject", "com.unity3d.player.UnityPlayerActivity"));
+                String data = nombremapabackend.get(); // Aquí obtienes el valor de la AtomicReference
+                String data2 = mapatxtbackend.get(); // Aquí obtienes el valor de la AtomicReference
+                Log.d("MiApp", "" + nombremapabackend);
+                Log.d("MiApp", "" + mapatxtbackend);
+                i.putExtra("input", data);
+                i.putExtra("input2", data2);
                 startActivity(i);
             }
         });

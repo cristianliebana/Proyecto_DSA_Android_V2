@@ -53,4 +53,7 @@ public interface Swagger {
 
     @GET("game/listaObjetosUsuario/{correo}")
     Call<List<TablaCompra>> getlistaObjetosUsuario(@Path("correo") String correo);
+
+    @GET("game/getMapa/{nombremapa}")
+    Call <Mapa> getMapa(@Path("nombremapa") String nombremapa);
 }
