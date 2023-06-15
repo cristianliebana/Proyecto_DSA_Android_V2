@@ -56,4 +56,7 @@ public interface Swagger {
 
     @GET("game/getMapa/{nombremapa}")
     Call <Mapa> getMapa(@Path("nombremapa") String nombremapa);
+
+    @PUT("game/putIdioma/{correo}/{language}")
+    Call<Language> putLanguage(@Path("correo") String correo, @Path("language") String language);
 }

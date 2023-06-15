@@ -49,6 +49,7 @@ public class MenuPrincipal extends AppCompatActivity {
         configureImageButton();
         configureEmpezarButton();
         configureCerrarSesionbtn();
+        configureIdiomaButton();
 
         TextView myTextview = findViewById(R.id.textMenuPrincipal);
         String textoMenu = getResources().getString(R.string.Main_menu);
@@ -58,8 +59,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
     private void configureTiendaButton() {
         Button tienda_button = (Button) findViewById(R.id.tienda);
-        String textoTienda = getResources().getString(R.string.Boton_tienda);
-        tienda_button.setText(textoTienda);
+
         tienda_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,4 +175,14 @@ public class MenuPrincipal extends AppCompatActivity {
             });
 
     }
+    private void configureIdiomaButton() {
+        Button idioma_button = (Button) findViewById(R.id.CambioIdiomabtn);
+        idioma_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuPrincipal.this, IdiomaActivity.class));
+            }
+        });
     }
+}
+

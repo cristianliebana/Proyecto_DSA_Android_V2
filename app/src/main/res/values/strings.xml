@@ -4,21 +4,26 @@
     <!-- Strings used for fragments for navigation -->
 
     <string name="Main_menu">Main menu</string>
-
     <string name="Boton_tienda">Shop</string>
+    <string name="Boton_Consulta">Question</string>
+    <string name="Boton_faq">FAQS EN</string>
+    <string name="Boton_ranking">Ranking EN</string>
+    <string name="Boton_empezar_juego">Start Game</string>
+    <string name="Boton_idioma">Language</string>
+    <string name="Cambio_de_Idioma">Change Language</string>
+    <string name="Español">Spanish</string>
+    <string name="Inglés">English</string>
+
 
     <string-array name="language_entries">
         <item>English</item>
         <item>Spanish</item>
-        <!-- Añade más opciones de idioma según tus necesidades -->
     </string-array>
 
     <string-array name="language_entry_values">
         <item>en</item>
         <item>es</item>
-        <!-- Añade los valores correspondientes a las opciones de idioma -->
     </string-array>
-    <string name="Boton_Denuncia">Report</string>
 
 
 </resources>

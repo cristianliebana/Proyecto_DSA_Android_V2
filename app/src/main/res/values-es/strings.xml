@@ -5,6 +5,14 @@
 
     <string name="Main_menu">Menu principal</string>
     <string name="Boton_tienda">Tienda</string>
+    <string name="Boton_Consulta">Consulta</string>
+    <string name="Boton_faq">FAQS</string>
+    <string name="Boton_ranking">Ranking</string>
+    <string name="Boton_empezar_juego">Empezar Juego</string>
+    <string name="Boton_idioma">Idioma</string>
+    <string name="Cambio_de_Idioma">Cambio de Idioma</string>
+    <string name="Español">Español</string>
+    <string name="Inglés">Inglés</string>
 
     <string-array name="language_entries">
         <item>English</item>
@@ -17,6 +25,5 @@
         <item>es</item>
         <!-- Añade los valores correspondientes a las opciones de idioma -->
     </string-array>
-    <string name="Boton_Denuncia">Denuncia</string>
 
 </resources>
