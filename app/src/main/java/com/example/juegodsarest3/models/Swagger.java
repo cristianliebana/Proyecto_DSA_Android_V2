@@ -33,8 +33,8 @@ public interface Swagger {
     @POST("game/compraObjetos/{correo}/{nombreObjeto}")
     Call<TablaCompra> hacerCompra(@Path("correo") String correo, @Path("nombreObjeto") String nombreObjeto);
 
-    @POST("game/añadirDenuncia")
-    Call<Denuncia> añadirDenuncia(@Body Denuncia d);
+    @POST("game/question")
+    Call<Consulta> añadirConsulta(@Body Consulta d);
 
     @GET("game/addObjeto")
     Call<List<Objeto>> Objetos();

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/patron"
-    tools:context=".activities.DenunciaActivity">
+    tools:context=".activities.ConsultaActivity">
 
     <TextView
         android:id="@+id/textMenuPrincipal"
@@ -13,7 +13,7 @@
         android:layout_height="62dp"
         android:layout_marginTop="65dp"
         android:gravity="center"
-        android:text="DENUNCIA"
+        android:text="CONSULTA"
         android:textColor="#F478A2"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,13 +33,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textMenuPrincipal" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/nombre"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="title"
         android:inputType="textPersonName"
-        android:hint="nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fecha" />
@@ -54,10 +54,10 @@
         android:hint="comentario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
-        android:id="@+id/EnviarAbuso_button"
+        android:id="@+id/EnviarConsulta_button"
         android:layout_width="144dp"
         android:layout_height="73dp"
         android:layout_marginTop="40dp"

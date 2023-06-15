@@ -8,24 +8,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.juegodsarest3.R;
 import com.example.juegodsarest3.RetrofitClient;
-import com.example.juegodsarest3.models.CredencialTO;
 import com.example.juegodsarest3.models.Mapa;
 import com.example.juegodsarest3.models.Swagger;
-import com.example.juegodsarest3.models.Usuario;
-import com.squareup.picasso.Picasso;
 
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicReference;
@@ -50,7 +43,7 @@ public class MenuPrincipal extends AppCompatActivity {
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
 
         configureTiendaButton();
-        configureDenunciaButton();
+        configureConsultaButton();
         configureFAQButton();
         configureRankingButton();
         configureImageButton();
@@ -74,14 +67,12 @@ public class MenuPrincipal extends AppCompatActivity {
             }
         });
     }
-        private void configureDenunciaButton() {
-            Button denuncia_button = (Button) findViewById(R.id.denunciabtn);
-            String textoDenuncia = getResources().getString(R.string.Boton_Denuncia);
-            denuncia_button.setText(textoDenuncia);
-            denuncia_button.setOnClickListener(new View.OnClickListener() {
+        private void configureConsultaButton() {
+            Button consulta_button = (Button) findViewById(R.id.consultabtn);
+            consulta_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                   // startActivity(new Intent(MenuPrincipal.this, DenunciaActivity.class));
+                    startActivity(new Intent(MenuPrincipal.this, ConsultaActivity.class));
                 }
             });
         }

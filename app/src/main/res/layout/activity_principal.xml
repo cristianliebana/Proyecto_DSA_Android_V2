@@ -36,13 +36,13 @@
         app:layout_constraintTop_toBottomOf="@+id/empezarJuegobtn" />
 
     <Button
-        android:id="@+id/denunciabtn"
+        android:id="@+id/consultabtn"
         style="?attr/materialIconButtonFilledTonalStyle"
         android:layout_width="207dp"
         android:layout_height="77dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#FCE4EC"
-        android:text="Denuncia"
+        android:text="CONSULTA"
         android:textColor="#E91E63"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/denunciabtn" />
+        app:layout_constraintTop_toBottomOf="@+id/consultabtn" />
 
     <Button
         android:id="@+id/btnRanking"

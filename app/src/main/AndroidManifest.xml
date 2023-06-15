@@ -78,7 +78,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.DenunciaActivity"
+            android:name=".activities.ConsultaActivity"
             android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/Theme.JuegoDSAREST3.NoActionBar">
