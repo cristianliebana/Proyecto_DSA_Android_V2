@@ -15,23 +15,9 @@
 
 
         <TextView
-            android:id="@+id/respuesta"
-            android:layout_width="396dp"
-            android:layout_height="56dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="8dp"
-            android:text="Description"
-            android:textSize="17dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/pregunta"
-            android:layout_width="360dp"
-            android:layout_height="57dp"
-            android:layout_above="@id/respuesta"
+            android:id="@+id/mensaje"
+            android:layout_width="391dp"
+            android:layout_height="183dp"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="1dp"

@@ -44,8 +44,8 @@ public class MenuPrincipal extends AppCompatActivity {
 
         configureTiendaButton();
         configureConsultaButton();
-        configureFAQButton();
-        configureRankingButton();
+        configureMensajesButton();
+        configureInsigniaButton();
         configureImageButton();
         configureEmpezarButton();
         configureCerrarSesionbtn();
@@ -76,21 +76,21 @@ public class MenuPrincipal extends AppCompatActivity {
                 }
             });
         }
-    private void configureFAQButton() {
-        Button faq_button = (Button) findViewById(R.id.FAQbtn);
-        faq_button.setOnClickListener(new View.OnClickListener() {
+    private void configureMensajesButton() {
+        Button mensaje_button = (Button) findViewById(R.id.Mensajebtn);
+        mensaje_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(MenuPrincipal.this, FAQActivity.class));
+                startActivity(new Intent(MenuPrincipal.this, MensajeActivity.class));
             }
         });
     }
-    private void configureRankingButton() {
-        Button ranking_button = (Button) findViewById(R.id.btnRanking);
-        ranking_button.setOnClickListener(new View.OnClickListener() {
+    private void configureInsigniaButton() {
+        Button insignia_button = (Button) findViewById(R.id.btnInsignia);
+        insignia_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  startActivity(new Intent(MenuPrincipal.this, RankingActivity.class));
+              startActivity(new Intent(MenuPrincipal.this, InsigniaActivity.class));
             }
         });
     }

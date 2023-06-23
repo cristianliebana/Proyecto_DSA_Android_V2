@@ -87,7 +87,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.FAQActivity"
+            android:name=".activities.MensajeActivity"
             android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/Theme.JuegoDSAREST3.NoActionBar">
@@ -96,7 +96,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.RankingActivity"
+            android:name=".activities.InsigniaActivity"
             android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/Theme.JuegoDSAREST3.NoActionBar">

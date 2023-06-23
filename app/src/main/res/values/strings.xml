@@ -6,8 +6,8 @@
     <string name="Main_menu">Main menu</string>
     <string name="Boton_tienda">Shop</string>
     <string name="Boton_Consulta">Question</string>
-    <string name="Boton_faq">FAQS EN</string>
-    <string name="Boton_ranking">Ranking EN</string>
+    <string name="Boton_mensaje">Messages</string>
+    <string name="Boton_insignia">Badges</string>
     <string name="Boton_empezar_juego">Start Game</string>
     <string name="Boton_idioma">Language</string>
     <string name="Cambio_de_Idioma">Change Language</string>

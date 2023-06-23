@@ -10,16 +10,15 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.juegodsarest3.R;
-import com.example.juegodsarest3.models.FAQ;
+import com.example.juegodsarest3.models.Mensaje;
 
-public class AdaptadorFAQ extends RecyclerView.Adapter<AdaptadorFAQ.ViewHolder> {
-    private List<FAQ> values;
+public class AdaptadorMensaje extends RecyclerView.Adapter<AdaptadorMensaje.ViewHolder> {
+    private List<Mensaje> values;
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView txtPregunta;
-        public TextView txtRespuesta;
+        public TextView txtMensaje;
 
         public View layout;
 
@@ -27,19 +26,18 @@ public class AdaptadorFAQ extends RecyclerView.Adapter<AdaptadorFAQ.ViewHolder> 
         public ViewHolder(View v) {
             super(v);
             layout = v;
-            txtPregunta = (TextView) v.findViewById(R.id.pregunta);
-            txtRespuesta = (TextView) v.findViewById(R.id.respuesta);
+            txtMensaje = (TextView) v.findViewById(R.id.mensaje);
 
 
         }
     }
 
-    public void setData(List<FAQ> myDataset) {
+    public void setData(List<Mensaje> myDataset) {
         values = myDataset;
         notifyDataSetChanged();
     }
 
-    public void add(int position, FAQ item) {
+    public void add(int position, Mensaje item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -49,21 +47,21 @@ public class AdaptadorFAQ extends RecyclerView.Adapter<AdaptadorFAQ.ViewHolder> 
         notifyItemRemoved(position);
     }
 
-    public AdaptadorFAQ(){values = new ArrayList<>();}
+    public AdaptadorMensaje(){values = new ArrayList<>();}
 
-    public AdaptadorFAQ(List<FAQ> myDataset) {
+    public AdaptadorMensaje(List<Mensaje> myDataset) {
         values = myDataset;
     }
 
 
     @Override
-    public AdaptadorFAQ.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
+    public AdaptadorMensaje.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                          int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(
                 parent.getContext());
         View v =
-                inflater.inflate(R.layout.activity_row_layout_faq, parent, false);
+                inflater.inflate(R.layout.activity_row_layout_mensaje, parent, false);
 
         ViewHolder vh = new ViewHolder(v);
         return vh;
@@ -73,18 +71,16 @@ public class AdaptadorFAQ extends RecyclerView.Adapter<AdaptadorFAQ.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        FAQ f = values.get(position);
-        final String pregunta = f.getPregunta();
-        holder.txtPregunta.setText(pregunta);
+        Mensaje f = values.get(position);
+        final String mensaje = f.getMensaje();
+        holder.txtMensaje.setText(mensaje);
 
-        holder.txtPregunta.setOnClickListener(new OnClickListener() {
+        holder.txtMensaje.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 remove (holder.getAdapterPosition());
             }
         });
-
-        holder.txtRespuesta.setText(f.getRespuesta());
 
     }
 

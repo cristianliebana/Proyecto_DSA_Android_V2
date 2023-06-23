@@ -42,11 +42,11 @@ public interface Swagger {
     @GET("game/listaObjetos")
     Call<List<Objeto>> getlistaObjetos();
 
-    @GET("game/getlistaFAQ")
-    Call<List<FAQ>> getlistaFAQ();
+    @GET("game/posts")
+    Call<List<Mensaje>> getlistaMensajes();
 
-    @GET("game/getRanking")
-    Call<List<Ranking>> getRanking();
+    @GET("game/badges/{correo}")
+    Call<List<Insignias>> getInsignias(@Path("correo") String correo);
 
     @GET("game/datosUsuario/{correo}")
     Call<Usuario> getUsuario(@Path("correo") String correo);

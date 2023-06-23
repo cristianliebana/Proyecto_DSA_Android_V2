@@ -5,15 +5,15 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.juegodsarest3.models.FAQ;
-import com.example.juegodsarest3.models.Objeto;
-import com.example.juegodsarest3.models.Ranking;
+import com.example.juegodsarest3.models.Insignias;
 import com.example.juegodsarest3.models.Swagger;
 
 import java.util.List;
@@ -23,9 +23,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import com.example.juegodsarest3.R;
 
-public class RankingActivity extends AppCompatActivity {
+public class InsigniaActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private AdaptadorRanking adapter;
+    private AdaptadorInsignia adapter;
     private RecyclerView.LayoutManager layoutManager;
 
     private ProgressBar theProgressBar;
@@ -34,17 +34,17 @@ public class RankingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ranking);
+        setContentView(R.layout.activity_insignias);
 
-        recyclerView = (RecyclerView) findViewById(R.id.my_new_recycler_view_ranking);
-        theProgressBar = (ProgressBar) findViewById(R.id.progressBarRanking);
+        recyclerView = (RecyclerView) findViewById(R.id.my_new_recycler_view_insignias);
+        theProgressBar = (ProgressBar) findViewById(R.id.progressBarInsignias);
 
         recyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new AdaptadorRanking();
+        adapter = new AdaptadorInsignia();
         recyclerView.setAdapter(adapter);
         doApiCall();
 
@@ -65,13 +65,15 @@ public class RankingActivity extends AppCompatActivity {
         itemTouchHelper.attachToRecyclerView(recyclerView);
     }
     private void doApiCall() {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        String correo = sharedPreferences.getString("correo", "");
         Swagger swagger = Swagger.retrofit.create(Swagger.class);
-        Call<List<Ranking>> call = swagger.getRanking();
+        Call<List<Insignias>> call = swagger.getInsignias(correo);
 
         theProgressBar.setVisibility(View.VISIBLE);
-        call.enqueue(new Callback<List<Ranking>>() {
+        call.enqueue(new Callback<List<Insignias>>() {
             @Override
-            public void onResponse(Call<List<Ranking>> call, Response<List<Ranking>> response) {
+            public void onResponse(Call<List<Insignias>> call, Response<List<Insignias>> response) {
                 theProgressBar.setVisibility(View.INVISIBLE);
 
                 adapter.setData(response.body());
@@ -79,7 +81,7 @@ public class RankingActivity extends AppCompatActivity {
 
             }
             @Override
-            public void onFailure(Call<List<Ranking>> call, Throwable t) {
+            public void onFailure(Call<List<Insignias>> call, Throwable t) {
 
 
                 String msg = "Error con el retrofit: "+t.toString();

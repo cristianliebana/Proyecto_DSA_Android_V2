@@ -6,26 +6,26 @@
 
     <!-- A RecyclerView with some commonly used attributes -->
     <TextView
-        android:id="@+id/titulo_ranking"
+        android:id="@+id/titulo_insignias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="RANKING"
-        android:textStyle="bold"
+        android:text="INSIGNIAS"
         android:textAlignment="center"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/my_new_recycler_view_ranking"
+        android:id="@+id/my_new_recycler_view_insignias"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/patron"
         android:scrollbars="vertical"
-        android:layout_below="@+id/titulo_ranking"
+        android:layout_below="@+id/titulo_insignias"
         android:layout_marginTop="20dp"/>
 
     <ImageView
-        android:id="@+id/my_new_imageView_ranking"
+        android:id="@+id/my_new_imageView_insignias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -36,7 +36,7 @@
         android:src="@android:drawable/ic_menu_add" />
 
     <ProgressBar
-        android:id="@+id/progressBarRanking"
+        android:id="@+id/progressBarInsignias"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

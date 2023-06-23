@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.juegodsarest3.R;
 
-public class row_layout_ranking extends AppCompatActivity {
+public class row_layout_mensaje extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_row_layout_ranking);
+        setContentView(R.layout.activity_row_layout_mensaje);
     }
 }

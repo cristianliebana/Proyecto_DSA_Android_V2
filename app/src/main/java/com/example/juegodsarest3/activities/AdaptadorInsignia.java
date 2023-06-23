@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 //import android.support.v7.widget.RecyclerView;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,19 +13,16 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.juegodsarest3.R;
-import com.example.juegodsarest3.models.Objeto;
-import com.example.juegodsarest3.models.Ranking;
+import com.example.juegodsarest3.models.Insignias;
 import com.squareup.picasso.Picasso;
 
-public class AdaptadorRanking extends RecyclerView.Adapter<AdaptadorRanking.ViewHolder> {
-    private List<Ranking> values;
+public class AdaptadorInsignia extends RecyclerView.Adapter<AdaptadorInsignia.ViewHolder> {
+    private List<Insignias> values;
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView txtHeader;
-        public TextView txtFooter;
-        public TextView txtFooter2;
 
         public ImageView icon;
         public View layout;
@@ -35,20 +31,18 @@ public class AdaptadorRanking extends RecyclerView.Adapter<AdaptadorRanking.View
         public ViewHolder(View v) {
             super(v);
             layout = v;
-            txtHeader = (TextView) v.findViewById(R.id.nickname);
-            txtFooter = (TextView) v.findViewById(R.id.fecha);
-            txtFooter2 = (TextView) v.findViewById(R.id.puntos);
-            icon = (ImageView) v.findViewById(R.id.icon2);
+            txtHeader = (TextView) v.findViewById(R.id.txtnombreinsignia);
+            icon = (ImageView) v.findViewById(R.id.iconinsignia);
 
         }
     }
 
-    public void setData(List<Ranking> myDataset) {
+    public void setData(List<Insignias> myDataset) {
         values = myDataset;
         notifyDataSetChanged();
     }
 
-    public void add(int position, Ranking item) {
+    public void add(int position, Insignias item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -58,21 +52,21 @@ public class AdaptadorRanking extends RecyclerView.Adapter<AdaptadorRanking.View
         notifyItemRemoved(position);
     }
 
-    public AdaptadorRanking(){values = new ArrayList<>();}
+    public AdaptadorInsignia(){values = new ArrayList<>();}
 
-    public AdaptadorRanking(List<Ranking> myDataset) {
+    public AdaptadorInsignia(List<Insignias> myDataset) {
         values = myDataset;
     }
 
 
     @Override
-    public AdaptadorRanking.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
+    public AdaptadorInsignia.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                           int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(
                 parent.getContext());
         View v =
-                inflater.inflate(R.layout.activity_row_layout_ranking, parent, false);
+                inflater.inflate(R.layout.activity_row_layout_insignias, parent, false);
 
         ViewHolder vh = new ViewHolder(v);
         return vh;
@@ -82,8 +76,8 @@ public class AdaptadorRanking extends RecyclerView.Adapter<AdaptadorRanking.View
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        Ranking ra = values.get(position);
-        final String name = ra.getNickname();
+        Insignias ra = values.get(position);
+        final String name = ra.getNombreinsignia();
         holder.txtHeader.setText(name);
 
         holder.txtHeader.setOnClickListener(new OnClickListener() {
@@ -92,9 +86,6 @@ public class AdaptadorRanking extends RecyclerView.Adapter<AdaptadorRanking.View
                 remove (holder.getAdapterPosition());
             }
         });
-
-        holder.txtFooter.setText(ra.getFecha());
-        holder.txtFooter2.setText(String.valueOf(ra.getPuntos()));
 
         Picasso.get().load(ra.getAvatar()).into(holder.icon);
 

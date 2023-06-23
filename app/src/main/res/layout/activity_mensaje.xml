@@ -6,22 +6,22 @@
 
     <!-- A RecyclerView with some commonly used attributes -->
     <TextView
-        android:id="@+id/titulo_faq"
+        android:id="@+id/titulo_mensaje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="FAQs"
-        android:textStyle="bold"
+        android:text="Bandeja de entrada"
         android:textAlignment="center"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/my_new_recycler_view_faq"
+        android:id="@+id/my_new_recycler_view_mensaje"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/patron"
         android:scrollbars="vertical"
-        android:layout_below="@+id/titulo_faq"
+        android:layout_below="@+id/titulo_mensaje"
         android:layout_marginTop="20dp"/>
 
     <ImageView
@@ -36,7 +36,7 @@
         android:src="@android:drawable/ic_menu_add" />
 
     <ProgressBar
-        android:id="@+id/progressBarfaq"
+        android:id="@+id/progressBarmensaje"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
