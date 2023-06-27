@@ -13,11 +13,11 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.juegodsarest3.R;
-import com.example.juegodsarest3.models.Insignias;
+import com.example.juegodsarest3.models.Insignia;
 import com.squareup.picasso.Picasso;
 
 public class AdaptadorInsignia extends RecyclerView.Adapter<AdaptadorInsignia.ViewHolder> {
-    private List<Insignias> values;
+    private List<Insignia> values;
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -37,12 +37,12 @@ public class AdaptadorInsignia extends RecyclerView.Adapter<AdaptadorInsignia.Vi
         }
     }
 
-    public void setData(List<Insignias> myDataset) {
+    public void setData(List<Insignia> myDataset) {
         values = myDataset;
         notifyDataSetChanged();
     }
 
-    public void add(int position, Insignias item) {
+    public void add(int position, Insignia item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -54,7 +54,7 @@ public class AdaptadorInsignia extends RecyclerView.Adapter<AdaptadorInsignia.Vi
 
     public AdaptadorInsignia(){values = new ArrayList<>();}
 
-    public AdaptadorInsignia(List<Insignias> myDataset) {
+    public AdaptadorInsignia(List<Insignia> myDataset) {
         values = myDataset;
     }
 
@@ -76,7 +76,7 @@ public class AdaptadorInsignia extends RecyclerView.Adapter<AdaptadorInsignia.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        Insignias ra = values.get(position);
+        Insignia ra = values.get(position);
         final String name = ra.getNombreinsignia();
         holder.txtHeader.setText(name);
 

@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.juegodsarest3.models.Insignias;
+import com.example.juegodsarest3.models.Insignia;
 import com.example.juegodsarest3.models.Swagger;
 
 import java.util.List;
@@ -68,12 +68,12 @@ public class InsigniaActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         String correo = sharedPreferences.getString("correo", "");
         Swagger swagger = Swagger.retrofit.create(Swagger.class);
-        Call<List<Insignias>> call = swagger.getInsignias(correo);
+        Call<List<Insignia>> call = swagger.getInsignias(correo);
 
         theProgressBar.setVisibility(View.VISIBLE);
-        call.enqueue(new Callback<List<Insignias>>() {
+        call.enqueue(new Callback<List<Insignia>>() {
             @Override
-            public void onResponse(Call<List<Insignias>> call, Response<List<Insignias>> response) {
+            public void onResponse(Call<List<Insignia>> call, Response<List<Insignia>> response) {
                 theProgressBar.setVisibility(View.INVISIBLE);
 
                 adapter.setData(response.body());
@@ -81,7 +81,7 @@ public class InsigniaActivity extends AppCompatActivity {
 
             }
             @Override
-            public void onFailure(Call<List<Insignias>> call, Throwable t) {
+            public void onFailure(Call<List<Insignia>> call, Throwable t) {
 
 
                 String msg = "Error con el retrofit: "+t.toString();

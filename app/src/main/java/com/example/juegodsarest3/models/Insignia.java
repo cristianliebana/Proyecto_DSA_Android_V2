@@ -1,6 +1,6 @@
 package com.example.juegodsarest3.models;
 
-public class Insignias {
+public class Insignia {
 
     String correo;
 
@@ -23,12 +23,12 @@ public class Insignias {
         this.avatar = avatar;
     }
 
-    public Insignias(){
+    public Insignia(){
 
 
     }
 
-    public Insignias(String correo,String nombreinsignia, String avatar){
+    public Insignia(String correo, String nombreinsignia, String avatar){
         setCorreo(correo);
         setNombreinsignia(nombreinsignia);
         setAvatar(avatar);

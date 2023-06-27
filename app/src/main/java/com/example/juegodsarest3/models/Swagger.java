@@ -46,7 +46,7 @@ public interface Swagger {
     Call<List<Mensaje>> getlistaMensajes();
 
     @GET("game/badges/{correo}")
-    Call<List<Insignias>> getInsignias(@Path("correo") String correo);
+    Call<List<Insignia>> getInsignias(@Path("correo") String correo);
 
     @GET("game/datosUsuario/{correo}")
     Call<Usuario> getUsuario(@Path("correo") String correo);
