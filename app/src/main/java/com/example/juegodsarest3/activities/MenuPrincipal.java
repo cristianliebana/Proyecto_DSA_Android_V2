@@ -34,13 +34,13 @@ public class MenuPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        Resources resources = getResources();
+/*        Resources resources = getResources();
         Configuration configuration = resources.getConfiguration();
 
         Locale.setDefault(new Locale("es"));
         Configuration config = new Configuration();
         config.locale = Locale.getDefault();
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());*/
 
         configureTiendaButton();
         configureConsultaButton();

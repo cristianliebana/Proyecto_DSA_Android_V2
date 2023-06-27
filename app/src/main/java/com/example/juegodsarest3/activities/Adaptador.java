@@ -20,6 +20,8 @@ import com.example.juegodsarest3.R;
 import com.example.juegodsarest3.models.Objeto;
 import com.example.juegodsarest3.models.Swagger;
 import com.example.juegodsarest3.models.TablaCompra;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Picasso;
 
 import retrofit2.Call;
@@ -28,7 +30,6 @@ import retrofit2.Response;
 
 public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
     private List<Objeto> values;
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
@@ -100,6 +101,8 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
         holder.buttonCompra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Snackbar mySnackbar = Snackbar.make(v, "Compra realizada", BaseTransientBottomBar.LENGTH_SHORT);
+                mySnackbar.show();
                 Context context = v.getContext();
                 int adapterPosition = holder.getAdapterPosition();
                 if (adapterPosition != RecyclerView.NO_POSITION) {
@@ -126,6 +129,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
                                 // La compra se realizó con éxito, puedes manejar la respuesta aquí
                                 TablaCompra tablaCompra = response.body();
                                 Log.d("Adaptador", "Compra realizada: " + tablaCompra.toString());
+
                             } else {
                                 // Ocurrió un error al realizar la compra, puedes manejar el error aquí
                                 Log.d("Adaptador", "Error al realizar la compra: " + response.message());

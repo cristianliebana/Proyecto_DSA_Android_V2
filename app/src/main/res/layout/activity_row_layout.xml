@@ -44,8 +44,8 @@
 
         <TextView
             android:id="@+id/objetoComprado"
-            android:layout_width="144dp"
-            android:layout_height="104dp"
+            android:layout_width="135dp"
+            android:layout_height="102dp"
             android:layout_above="@id/secondLine"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="15dp"
@@ -74,15 +74,15 @@
 
         <Button
             android:id="@+id/compraORM"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            android:layout_width="102dp"
+            android:layout_height="44dp"
             android:layout_above="@+id/secondLine"
             android:layout_below="@+id/thirdLine"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="6dp"
-            android:text="Buy" />
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Boton_compra" />
 
 
     </RelativeLayout>

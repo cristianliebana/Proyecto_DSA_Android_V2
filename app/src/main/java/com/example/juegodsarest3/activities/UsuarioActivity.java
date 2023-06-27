@@ -132,9 +132,9 @@ public class UsuarioActivity extends AppCompatActivity {
                     TextView txtCorreo = findViewById(R.id.txtCorreo);
                     TextView txtDinero = findViewById(R.id.txtDinero);
 
-                    String nombreLabel = "Nombre: " + nombre;
-                    String correoLabel = "Correo: " + correo;
-                    String dineroLabel = "Dinero: " + texto +" €";
+                    String nombreLabel = getString(R.string.Nombre) + " " + nombre;
+                    String correoLabel = getString(R.string.Correo) + " " + correo;
+                    String dineroLabel = getString(R.string.Dinero) + " " + dsaCoins + "€";
 
                     txtNombreUsuario.setText(nombreLabel);
                     txtCorreo.setText(correoLabel);

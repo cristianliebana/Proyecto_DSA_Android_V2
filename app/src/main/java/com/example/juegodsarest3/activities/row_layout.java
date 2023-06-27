@@ -36,6 +36,7 @@ public class row_layout extends AppCompatActivity {
             public void onClick(View v) {
                 // Aquí se ejecutará el código cuando se presione el botón
                 Log.d("row_layout", "Botón de compra presionado");
+
             }
         });
 

@@ -20,6 +20,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import com.example.juegodsarest3.R;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 public class TiendaActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -71,9 +73,7 @@ public class TiendaActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Objeto>> call, Response<List<Objeto>> response) {
                 theProgressBar.setVisibility(View.INVISIBLE);
-
                 adapter.setData(response.body());
-
 
             }
             @Override

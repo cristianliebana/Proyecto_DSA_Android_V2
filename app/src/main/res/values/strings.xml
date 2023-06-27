@@ -11,6 +11,17 @@
     <string name="Boton_empezar_juego">Start Game</string>
     <string name="Boton_idioma">Language</string>
     <string name="Cambio_de_Idioma">Change Language</string>
+    <string name="Objetos_en_la_tienda">Items store</string>
+    <string name="Consulta_titulo">QUESTION</string>
+    <string name="Consulta_mandar">SEND</string>
+    <string name="Bandeja_entrada">INBOX</string>
+    <string name="Insignias">BADGES</string>
+    <string name="Datos_del_usuario">User data</string>
+    <string name="Objetos_en_el_inventario">Items in inventory</string>
+    <string name="Nombre">Name: </string>
+    <string name="Correo">Mail: </string>
+    <string name="Dinero">Money: </string>
+    <string name="Boton_compra">BUY</string>
     <string name="Español">Spanish</string>
     <string name="Inglés">English</string>
 

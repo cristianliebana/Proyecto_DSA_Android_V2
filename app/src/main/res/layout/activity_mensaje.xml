@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Bandeja de entrada"
+        android:text="@string/Bandeja_entrada"
         android:textAlignment="center"
         android:textSize="25dp"
         android:textStyle="bold" />
