@@ -12,17 +12,18 @@
         android:layout_marginTop="20dp"
         android:text="@string/Bandeja_entrada"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textColor="#F478A2"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_new_recycler_view_mensaje"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/patron"
-        android:scrollbars="vertical"
         android:layout_below="@+id/titulo_mensaje"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="5dp"
+        android:background="@drawable/patron"
+        android:scrollbars="vertical" />
 
     <ImageView
         android:id="@+id/my_new_imageView_faq"

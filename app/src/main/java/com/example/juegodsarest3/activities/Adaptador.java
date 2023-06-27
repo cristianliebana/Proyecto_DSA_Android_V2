@@ -146,7 +146,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
         });
 
         holder.txtFooter.setText(o.getDescripcion());
-        holder.txtFooter2.setText(String.valueOf(o.getPrecio()));
+        holder.txtFooter2.setText(String.valueOf(o.getPrecio()) +"€");
 
         Picasso.get().load(o.getFotoimagen()).into(holder.icon);
 

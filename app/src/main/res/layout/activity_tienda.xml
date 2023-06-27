@@ -11,9 +11,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/Objetos_en_la_tienda"
+        android:textColor="#F478A2"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:textSize="25dp" />
+         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_new_recycler_view"
