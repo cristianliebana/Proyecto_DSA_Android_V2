@@ -51,10 +51,6 @@ public class MenuPrincipal extends AppCompatActivity {
         configureCerrarSesionbtn();
         configureIdiomaButton();
 
-        TextView myTextview = findViewById(R.id.textMenuPrincipal);
-        String textoMenu = getResources().getString(R.string.Main_menu);
-        myTextview.setText(textoMenu);
-
     }
 
     private void configureTiendaButton() {
