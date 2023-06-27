@@ -22,6 +22,11 @@
     <string name="Correo">Mail: </string>
     <string name="Dinero">Money: </string>
     <string name="Boton_compra">BUY</string>
+    <string name="Boton_entrar">ENTER</string>
+    <string name="txt_registrar">Not registered yet?</string>
+    <string name="Boton_registrar">REGISTER</string>
+    <string name="Registrar_title">REGISTER</string>
+    <string name="Boton_registrar2">REGISTER</string>
     <string name="Español">Spanish</string>
     <string name="Inglés">English</string>
 
